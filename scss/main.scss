@@ -1,0 +1,480 @@
+// COLORS
+$color_orange_default: #F56E02;
+$color_white_default: rgb(240,240,240);
+$color_black_default: rgb(40,40,40);
+
+// TYPEFACES
+$font_avinir_next: Avenir Next, Helvetica, Helvetica Neue, Arial;
+$font_avinir_next_condensed: Avenir Next Condensed, Helvetica, Helvetica Neue, Arial;
+
+// BORDER
+$border_class_default: 3px solid rgb(255,255,255);
+$border_radius_default: 10px;
+
+@mixin border_box_default {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// GRADIENT BACKGROUNDS
+@mixin gradient_orange_radial_orange {
+	background: #f56e02;
+	background: -moz-radial-gradient(center, ellipse cover, #f56e02 0%, #b54f01 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f56e02), color-stop(100%,#b54f01));
+	background: -webkit-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
+	background: -o-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
+	background: radial-gradient(ellipse at center, #f56e02 0%,#b54f01 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f56e02', endColorstr='#b54f01',GradientType=1 );
+}
+@mixin gradient_grey_down_white {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, rgba(244,244,244,0.9) 0%, rgba(226,226,226,0.9) 50%, rgba(219,219,219,0.9) 51%, rgba(249,249,249,0.9) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,244,244,0.9)), color-stop(50%,rgba(226,226,226,0.9)), color-stop(51%,rgba(219,219,219,0.9)), color-stop(100%,rgba(249,249,249,0.9)));
+	background: -webkit-linear-gradient(top, rgba(244,244,244,0.9) 0%,rgba(226,226,226,0.9) 50%,rgba(219,219,219,0.9) 51%,rgba(249,249,249,0.9) 100%);
+	background: -o-linear-gradient(top, rgba(244,244,244,0.9) 0%,rgba(226,226,226,0.9) 50%,rgba(219,219,219,0.9) 51%,rgba(249,249,249,0.9) 100%);
+	background: -ms-linear-gradient(top, rgba(244,244,244,0.9) 0%,rgba(226,226,226,0.9) 50%,rgba(219,219,219,0.9) 51%,rgba(249,249,249,0.9) 100%);
+	background: linear-gradient(to bottom, rgba(244,244,244,0.9) 0%,rgba(226,226,226,0.9) 50%,rgba(219,219,219,0.9) 51%,rgba(249,249,249,0.9) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f4f4f4', endColorstr='#e6f9f9f9',GradientType=0 );
+}
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+html {
+	@include gradient_orange_radial_orange;
+}
+body {
+    font: 16px/26px $font_avinir_next;
+    font-weight: normal;
+    color: $color_black_default;
+}
+h1, h2 {
+	font-family: $font_avinir_next;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	
+	li {
+		list-style: none;
+	}
+}
+
+.wrapper {
+    width: 100%;
+}
+
+html, body, .main-container, .main {
+	height: 100%;
+}
+.main {
+	overflow-y: hidden;
+	
+	aside {
+		display: block;
+		float: left;
+		width: 30%;
+		height: 100%;
+		@include border_box_default;
+		overflow-y: scroll;
+	}
+	article {
+		display: block;
+		float: left;
+		padding: 0 0 0 3em;
+		width: 55%;
+		height: 100%;
+		@include gradient_grey_down_white;
+		@include border_box_default;
+		overflow-y: scroll;
+		box-shadow: inset 0px 0 30px -10px rgba(0,0,0,.9);
+	}
+	#time_keeper {
+		display: block;
+		float: left;
+		padding: .8em 1%;
+		width: 15%;
+		height: 100%;
+		@include border_box_default;
+		overflow-y: scroll;
+		background-color: $color_black_default;
+	}
+}
+.class_date {
+	list-style: none;
+	color: $color_white_default;
+}
+#class_dates {
+	.class_objectives {
+		display: none;
+	}
+	.class_section {
+		.section_description, .section_handout {
+			display: none;
+		}
+	}
+	.class_date {
+		display: block;
+		padding: 1.4em 5%;
+		border-bottom: 1px solid $color_white_default;
+		cursor: pointer;
+		-moz-transition: background-color .5s;
+		-webkit-transition: background-color .5s;
+		-o-transition: background-color .5s;
+		transition: background-color .5s;
+		
+		&:nth-child(even) {
+			background-color: rgba(0,0,0,.1);
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+		&:hover {
+			background-color: rgba(255,255,255, .5);
+		}
+		&.class_active {
+			background-color: rgba(255,255,255, .9);
+			color: $color_black_default;
+		}
+		.class_date_label {
+			font-size: 3em;
+			line-height: 1em;
+		}
+		.section_subject {
+			font-size: .8em;
+		}
+	}
+}
+#class_display {
+	.class_date_label {
+		display: none;
+	}
+	.class_date {
+		@include border_box_default;
+		border: $border_class_default;
+		border-radius: $border_radius_default;
+	}
+	.class_objectives {
+		ol {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	.class_section {
+		margin: 0 0 2em -3em;
+		padding: 2em 0 2em 3em;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.class_section_active {
+			background-color: rgba(255,255,255,.4);
+		}
+		.section_subject {
+			font-size: 1.5em;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.section_description {
+			@include border_box_default;
+			
+			li {
+				margin: 0;
+				padding: .5em 0;
+				@include border_box_default;
+				cursor: default;
+				
+				&:hover {
+					padding-left: 2%;
+					background-color: rgba(255,255,255,.2);
+				}
+				&.class_section_item_active {
+					padding: 1.5em 0 1.5em 3%;
+					border-bottom: 4px solid $color_orange_default;
+					background-color: rgba(255,255,255,.4);
+				}
+			}
+			ul {
+				padding-left: 3%;
+				font-size: .9em;
+				font-style: italic;
+				
+				li {
+					padding: .2em 0;
+				}
+			}
+		}
+		.section_handouts {
+			margin-top: 1em;
+			border-top: 1px solid $color_black_default;
+			
+			.section_handout {
+				margin: .5em 0 .5em;
+				font-size: .8em;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.class_start_time, .class_end_time, .section_duration {
+	display: none;
+}
+#time_keeper {
+	text-align: center;
+	color: $color_white_default;
+	
+	#current_time {
+		padding-top: 1em;
+		font-size: 2.4em;
+		font-weight: bold;
+	}
+}
+
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+	
+}
+
+@media only screen and (min-width: 768px) {
+	
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
