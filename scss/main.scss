@@ -1,5 +1,8 @@
+@import "normalize";
+
 // COLORS
-$color_orange_default: #F56E02;
+$color_theme_default: rgb(245, 110, 2); // orange by default (go Tigers!) | change to any color you'd like
+$color_theme_dark: darken($color_theme_default, 20);
 $color_white_default: rgb(240,240,240);
 $color_black_default: rgb(40,40,40);
 
@@ -19,14 +22,14 @@ $border_radius_default: 10px;
 
 // GRADIENT BACKGROUNDS
 @mixin gradient_orange_radial_orange {
-	background: #f56e02;
-	background: -moz-radial-gradient(center, ellipse cover, #f56e02 0%, #b54f01 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f56e02), color-stop(100%,#b54f01));
-	background: -webkit-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
-	background: -o-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
-	background: -ms-radial-gradient(center, ellipse cover, #f56e02 0%,#b54f01 100%);
-	background: radial-gradient(ellipse at center, #f56e02 0%,#b54f01 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f56e02', endColorstr='#b54f01',GradientType=1 );
+	background: $color_theme_default;
+	background: -moz-radial-gradient(center, ellipse cover, $color_theme_default 0%, $color_theme_dark 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$color_theme_default), color-stop(100%,$color_theme_dark));
+	background: -webkit-radial-gradient(center, ellipse cover, $color_theme_default 0%,$color_theme_dark 100%);
+	background: -o-radial-gradient(center, ellipse cover, $color_theme_default 0%,$color_theme_dark 100%);
+	background: -ms-radial-gradient(center, ellipse cover, $color_theme_default 0%,$color_theme_dark 100%);
+	background: radial-gradient(ellipse at center, $color_theme_default 0%,$color_theme_dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_theme_default', endColorstr='$color_theme_dark',GradientType=1 );
 }
 @mixin gradient_grey_down_white {
 	background: #ffffff;
@@ -38,6 +41,7 @@ $border_radius_default: 10px;
 	background: linear-gradient(to bottom, rgba(244,244,244,0.9) 0%,rgba(226,226,226,0.9) 50%,rgba(219,219,219,0.9) 51%,rgba(249,249,249,0.9) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f4f4f4', endColorstr='#e6f9f9f9',GradientType=0 );
 }
+
 
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
@@ -256,7 +260,7 @@ html, body, .main-container, .main {
 				}
 				&.class_section_item_active {
 					padding: 1.5em 0 1.5em 3%;
-					border-bottom: 4px solid $color_orange_default;
+					border-bottom: 4px solid $color_theme_default;
 					background-color: rgba(255,255,255,.4);
 				}
 			}
@@ -322,18 +326,6 @@ html, body, .main-container, .main {
 
 
 
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-	
-}
-
-@media only screen and (min-width: 768px) {
-	
-}
 
 @media only screen and (min-width: 1140px) {
 
