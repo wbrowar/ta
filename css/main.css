@@ -170,7 +170,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: "courier new", monospace;
+  _font-family: 'courier new', monospace;
   font-size: 1em; }
 
 /*
@@ -289,7 +289,7 @@ form {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -427,6 +427,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'Timepiecerounded-MissSwiss';
+  src: url("fonts/timepiecerounded-missswiss.eot");
+  src: url("fonts/timepiecerounded-missswiss.eot?#iefix") format("embedded-opentype"), url("fonts/timepiecerounded-missswiss.woff") format("woff"), url("fonts/timepiecerounded-missswiss.ttf") format("truetype");
+  src: url("fonts/Timepiecerounded-MissSwiss.otf") format("OpenType");
+  font-weight: normal;
+  font-style: normal; }
+
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
@@ -453,7 +461,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -545,7 +553,7 @@ html, body, .main-container, .main {
   .main #time_keeper {
     display: block;
     float: left;
-    padding: 0.8em 1%;
+    padding: .8em 1%;
     width: 15%;
     height: 100%;
     -webkit-box-sizing: border-box;
@@ -567,10 +575,10 @@ html, body, .main-container, .main {
   padding: 1.4em 5%;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s; }
+  -moz-transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s; }
   #class_dates .class_date:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.1); }
   #class_dates .class_date:last-child {
@@ -614,7 +622,7 @@ html, body, .main-container, .main {
     box-sizing: border-box; }
     #class_display .class_section .section_description li {
       margin: 0;
-      padding: 0.5em 0;
+      padding: .5em 0;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -631,12 +639,12 @@ html, body, .main-container, .main {
       font-size: .9em;
       font-style: italic; }
       #class_display .class_section .section_description ul li {
-        padding: 0.2em 0; }
+        padding: .2em 0; }
   #class_display .class_section .section_handouts {
     margin-top: 1em;
     border-top: 1px solid #282828; }
     #class_display .class_section .section_handouts .section_handout {
-      margin: 0.5em 0 0.5em;
+      margin: .5em 0 .5em;
       font-size: .8em;
       font-weight: bold; }
 
@@ -646,6 +654,12 @@ html, body, .main-container, .main {
 #time_keeper {
   text-align: center;
   color: #f0f0f0; }
+  #time_keeper #current_time_clock {
+    font-family: 'Timepiecerounded-MissSwiss', Arial;
+    color: #f0f0f0;
+    text-shadow: 0 0 5px yellow;
+    font-size: 3em;
+    text-rendering: optimizelegibility; }
   #time_keeper #current_time {
     padding-top: 1em;
     font-size: 2.4em;
@@ -724,7 +738,7 @@ html, body, .main-container, .main {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -749,7 +763,7 @@ html, body, .main-container, .main {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {

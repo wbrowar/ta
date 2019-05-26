@@ -1,5 +1,16 @@
 @import "normalize";
 
+@font-face {
+    font-family: 'Timepiecerounded-MissSwiss';
+    src: url('fonts/timepiecerounded-missswiss.eot');
+    src: url('fonts/timepiecerounded-missswiss.eot?#iefix') format('embedded-opentype'),
+         url('fonts/timepiecerounded-missswiss.woff') format('woff'),
+         url('fonts/timepiecerounded-missswiss.ttf') format('truetype');
+     src: url("fonts/Timepiecerounded-MissSwiss.otf") format('OpenType');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // COLORS
 $color_theme_default: rgb(245, 110, 2); // orange by default (go Tigers!) | change to any color you'd like
 $color_theme_dark: darken($color_theme_default, 20);
@@ -293,6 +304,13 @@ html, body, .main-container, .main {
 	text-align: center;
 	color: $color_white_default;
 	
+	#current_time_clock {
+		font-family: 'Timepiecerounded-MissSwiss', Arial;
+		color: $color_white_default;
+		text-shadow: 0 0 5px yellow;
+		font-size: 3em;
+		text-rendering: optimizelegibility;
+	}
 	#current_time {
 		padding-top: 1em;
 		font-size: 2.4em;
